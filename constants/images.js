@@ -21,12 +21,23 @@ const nasi_briyani_mutton = require('../assets/images/nasi-briyani-mutton.jpg');
 const nasi_lemak = require('../assets/images/nasi-lemak.jpg');
 const noodle_shop = require('../assets/images/noodle-shop.jpg');
 const pizza_restaurant = require('../assets/images/pizza-restaurant.jpg');
-const pizza = require('../assets/images/pizza.jpg');
-const salad = require('../assets/images/salad.jpg');
 const sarawak_laksa = require('../assets/images/sarawak-laksa.jpg');
 const sushi = require('../assets/images/sushi.jpg');
 const teh_c_peng = require('../assets/images/teh-c-peng.jpg');
 const tomato_pasta = require('../assets/images/tomato-pasta.jpg');
+
+// NEW
+const burger = require('../assets/images/menu/burger.png');
+const chicken_burger = require('../assets/images/menu/chicken_burger.png');
+const beef_cheese_burger = require('../assets/images/menu/beef_cheese_burger.png');
+const biryani = require('../assets/images/menu/biryani.png');
+const fries = require('../assets/images/menu/fries.png');
+const japanese = require('../assets/images/menu/japanese.png');
+const pizza = require('../assets/images/menu/pizza.png');
+const salad = require('../assets/images/menu/salad.png');
+const sandwich = require('../assets/images/menu/sandwich.png');
+const seafood = require('../assets/images/menu/seafood.png');
+const tacos = require('../assets/images/menu/tacos.png');
 
 export default {
 	avatar_1,
@@ -54,10 +65,21 @@ export default {
 	nasi_lemak,
 	noodle_shop,
 	pizza_restaurant,
-	pizza,
 	sarawak_laksa,
 	sushi,
-	salad,
 	teh_c_peng,
 	tomato_pasta,
+	
+	// NEW
+	burger,
+	chicken_burger,
+	beef_cheese_burger,
+	biryani,
+	fries,
+	japanese,
+	pizza,
+	salad,
+	sandwich,
+	seafood,
+	tacos,
 }

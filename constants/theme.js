@@ -9,6 +9,8 @@ export const COLORS = {
     // colors
     black: "#1E1F20",
     white: "#FFFFFF",
+    transparentBlack1: "rgba(88, 88, 88, 0.13)",
+    transparentBlack2: "rgba(88, 88, 88, 0.63)",
 
     lightGray: "#e8e8e8",
     lightGray2: "#e0e0e0",
