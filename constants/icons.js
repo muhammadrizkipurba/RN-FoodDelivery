@@ -12,6 +12,8 @@ export const wallet = require("../assets/icons/wallet.png");
 export const filter = require("../assets/icons/filter.png");
 export const search = require("../assets/icons/search.png");
 export const menu = require("../assets/icons/menu.png");
+export const star = require("../assets/icons/star.png");
+export const location = require("../assets/icons/location.png");
 
 // CATEGORIES
 export const dessert = require("../assets/icons/dessert.png");
@@ -21,6 +23,8 @@ export const sushi = require("../assets/icons/sushi.png");
 export const seafood = require("../assets/icons/seafood.png");
 
 export default {
+    star,
+    location,
     cart,
     coupon,
     cross,

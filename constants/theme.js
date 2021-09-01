@@ -5,10 +5,12 @@ export const COLORS = {
     // base colors
     primary: "#47b881", // orange
     secondary: "#d4eee2",   // gray
+    red: "#d60200",   // gray
 
     // colors
     black: "#1E1F20",
     white: "#FFFFFF",
+    highlight: "#f5f5f5",
     transparentBlack1: "rgba(88, 88, 88, 0.13)",
     transparentBlack2: "rgba(88, 88, 88, 0.63)",
 

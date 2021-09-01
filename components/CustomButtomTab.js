@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { View, Text, TouchableWithoutFeedback, Image } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
-import Animated, { useAnimatedStyle, useSharedValue, withTiming }  from 'react-native-reanimated'
+import Animated from 'react-native-reanimated'
 import { COLORS, icons, SIZES, utils } from '../constants'
 
 const TabButton = ({ label, icon, isFocused, onPress, outerContainerStyle, innerContainerStyle }) => {
@@ -63,114 +63,20 @@ const TabButton = ({ label, icon, isFocused, onPress, outerContainerStyle, inner
   )
 }
 
-const CustomButtomTab = ({ selectedTab, setSelectedTabFunct }) => {
-
-  // Reanimated Shared Value
-  const homeTabFlex = useSharedValue(1);
-  const homeTabColor = useSharedValue(COLORS.white);
-  const searchTabFlex = useSharedValue(1);
-  const searchTabColor = useSharedValue(COLORS.white);
-  const cartTabFlex = useSharedValue(1);
-  const cartTabColor = useSharedValue(COLORS.white);
-  const favouriteTabFlex = useSharedValue(1);
-  const favouriteTabColor = useSharedValue(COLORS.white);
-  const notificationTabFlex = useSharedValue(1);
-  const notificationTabColor = useSharedValue(COLORS.white);
-
-  // Reanimated Style
-  const homeFlexStyle = useAnimatedStyle(() => {
-    return {
-      flex: homeTabFlex.value
-    };
-  });
-  const homeColorStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: homeTabColor.value
-    };
-  });
-  const searchFlexStyle = useAnimatedStyle(() => {
-    return {
-      flex: searchTabFlex.value
-    };
-  });
-  const searchColorStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: searchTabColor.value
-    };
-  });
-  const cartFlexStyle = useAnimatedStyle(() => {
-    return {
-      flex: cartTabFlex.value
-    };
-  });
-  const cartColorStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: cartTabColor.value
-    };
-  });
-  const favouriteFlexStyle = useAnimatedStyle(() => {
-    return {
-      flex: favouriteTabFlex.value
-    };
-  });
-  const favouriteColorStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: favouriteTabColor.value
-    };
-  });
-  const notificationFlexStyle = useAnimatedStyle(() => {
-    return {
-      flex: notificationTabFlex.value
-    };
-  });
-  const notificationColorStyle = useAnimatedStyle(() => {
-    return {
-      backgroundColor: notificationTabColor.value
-    };
-  });
-
-  useEffect(() => {
-    if(selectedTab === utils.screens.home) {
-      homeTabFlex.value = withTiming(4, { duration: 500 });
-      homeTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      homeTabFlex.value = withTiming(1, { duration: 500 });
-      homeTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-
-    if(selectedTab === utils.screens.search) {
-      searchTabFlex.value = withTiming(4, { duration: 500 });
-      searchTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      searchTabFlex.value = withTiming(1, { duration: 500 });
-      searchTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-
-    if(selectedTab === utils.screens.cart) {
-      cartTabFlex.value = withTiming(4, { duration: 500 });
-      cartTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      cartTabFlex.value = withTiming(1, { duration: 500 });
-      cartTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-
-    if(selectedTab === utils.screens.favourite) {
-      favouriteTabFlex.value = withTiming(4, { duration: 500 });
-      favouriteTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      favouriteTabFlex.value = withTiming(1, { duration: 500 });
-      favouriteTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-
-    if(selectedTab === utils.screens.notification) {
-      notificationTabFlex.value = withTiming(4, { duration: 500 });
-      notificationTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      notificationTabFlex.value = withTiming(1, { duration: 500 });
-      notificationTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-  }, [selectedTab]);
-
+const CustomButtomTab = ({ 
+  selectedTab,
+  setSelectedTabFunct,
+  homeFlexStyle,
+  homeColorStyle,
+  searchFlexStyle,
+  searchColorStyle,
+  cartFlexStyle,
+  cartColorStyle,
+  favouriteFlexStyle,
+  favouriteColorStyle,
+  notificationFlexStyle,
+  notificationColorStyle,
+}) => {
   return (
     <View
         style={{
