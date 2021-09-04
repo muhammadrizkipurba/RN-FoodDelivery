@@ -77,9 +77,21 @@ const MainLayout = ({ drawerAnimationStyle, navigation, selectedTab, setSelected
   });
 
   useEffect(() => {
-    if(selectedTab === utils.screens.search) {
+    if(selectedTab === utils.screens.home) {
       flatListRef?.current?.scrollToIndex({
         index: 0,
+        animated: false
+      });
+      homeTabFlex.value = withTiming(4, { duration: 500 });
+      homeTabColor.value = withTiming(COLORS.primary, { duration: 500 });
+    } else {
+      homeTabFlex.value = withTiming(1, { duration: 500 });
+      homeTabColor.value = withTiming(COLORS.white, { duration: 500 });
+    };
+    
+    if(selectedTab === utils.screens.search) {
+      flatListRef?.current?.scrollToIndex({
+        index: 1,
         animated: false
       });
       searchTabFlex.value = withTiming(4, { duration: 500 });
@@ -91,7 +103,7 @@ const MainLayout = ({ drawerAnimationStyle, navigation, selectedTab, setSelected
 
     if(selectedTab === utils.screens.cart) {
       flatListRef?.current?.scrollToIndex({
-        index: 1,
+        index: 2,
         animated: false
       });
       cartTabFlex.value = withTiming(4, { duration: 500 });
@@ -99,18 +111,6 @@ const MainLayout = ({ drawerAnimationStyle, navigation, selectedTab, setSelected
     } else {
       cartTabFlex.value = withTiming(1, { duration: 500 });
       cartTabColor.value = withTiming(COLORS.white, { duration: 500 });
-    };
-
-    if(selectedTab === utils.screens.home) {
-      flatListRef?.current?.scrollToIndex({
-        index: 2,
-        animated: false
-      });
-      homeTabFlex.value = withTiming(4, { duration: 500 });
-      homeTabColor.value = withTiming(COLORS.primary, { duration: 500 });
-    } else {
-      homeTabFlex.value = withTiming(1, { duration: 500 });
-      homeTabColor.value = withTiming(COLORS.white, { duration: 500 });
     };
 
     if(selectedTab === utils.screens.favourite) {

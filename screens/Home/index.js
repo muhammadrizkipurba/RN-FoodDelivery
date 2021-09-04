@@ -3,6 +3,7 @@ import { FlatList, Image, Text, TextInput, TouchableOpacity, View } from 'react-
 import { HorizontalFoodCard } from '../../components';
 import VerticalFoodCard from '../../components/VerticalFoodCard';
 import { COLORS, icons, SIZES, dummyData } from '../../constants';
+import FilterModal from './views/FilterModal';
 
 const Section = ({ title, onPress, children }) => {
   return (
@@ -52,6 +53,7 @@ const Home = () => {
   const [recommends, setRecommends] = useState([]);
   const [popular, setPopular] = useState([]);
   const [menuList, setMenuList] = useState([]);
+  const [showFilterModal, setShowFilterModal] = useState(false);
 
   useEffect(() => {
     handleChangeCategory(selectedCategoryID, selectedMenuType);
@@ -112,7 +114,7 @@ const Home = () => {
         />
 
         <TouchableOpacity
-          onPress={() => {}}
+          onPress={() => setShowFilterModal(true)}
         >
           <Image 
             source={icons.filter}
@@ -348,6 +350,13 @@ const Home = () => {
     <View style={{flex: 1, marginBottom: 200}}>
       {/* SEARCH SECTION */}
       {renderSearch()}
+
+      { showFilterModal && 
+        <FilterModal 
+          isVisible={showFilterModal}
+          onClose={() => setShowFilterModal(false)}
+        />
+      }
 
       {/* LIST */}
       <FlatList 

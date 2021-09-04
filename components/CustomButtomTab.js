@@ -116,6 +116,17 @@ const CustomButtomTab = ({
           }}
         >
           <TabButton 
+            label={utils.screens.home}
+            icon={icons.home}
+            isFocused={selectedTab === utils.screens.home}
+            outerContainerStyle={homeFlexStyle}
+            innerContainerStyle={homeColorStyle}
+            onPress={() => {
+              setSelectedTabFunct(utils.screens.home)
+              // navigation.navigate('MainLayout')
+            }}
+          />
+          <TabButton 
             label={utils.screens.search}
             icon={icons.search}
             isFocused={selectedTab === utils.screens.search}
@@ -134,17 +145,6 @@ const CustomButtomTab = ({
             innerContainerStyle={cartColorStyle}
             onPress={() => {
               setSelectedTabFunct(utils.screens.cart)
-              // navigation.navigate('MainLayout')
-            }}
-          />
-          <TabButton 
-            label={utils.screens.home}
-            icon={icons.home}
-            isFocused={selectedTab === utils.screens.home}
-            outerContainerStyle={homeFlexStyle}
-            innerContainerStyle={homeColorStyle}
-            onPress={() => {
-              setSelectedTabFunct(utils.screens.home)
               // navigation.navigate('MainLayout')
             }}
           />
