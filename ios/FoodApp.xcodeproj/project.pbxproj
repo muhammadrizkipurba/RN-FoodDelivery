@@ -145,7 +145,6 @@
 				66CF4652BE832B36AB7C9595 /* Pods-FoodApp-FoodAppTests.debug.xcconfig */,
 				EAE2B3F23FCF7F830E99E8EF /* Pods-FoodApp-FoodAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
